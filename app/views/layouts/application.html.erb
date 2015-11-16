@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evolution Proxy</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="../css/froala_style.min.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Oxygen|Montserrat' rel='stylesheet' type='text/css'>  
+</head>
+<body>
+  
+  <nav>
+        
+        <%= link_to services_url do  %>
+          <%= image_tag 'logo.jpg' %>
+        <% end %>
+    
+
+      <ul>
+        <li><a href="#leadership">Leadership</li>
+        <li><a href="#services">Integrated services</li>
+        <li><a href="#">News</li>
+        <li><a href="#contact">Contact</li>
+      </ul>
+  </nav>
+
+<div class="content">
+
+  <%= yield %>
+
+
+  <footer>
+    <div class="left">
+      <%= image_tag 'logo.jpg'%>
+
+      <p> Evolution Proxy is a sister-company of <a href="http://www.bayfieldstrategy.com/">Bayfield Strategy</a>.</p>
+
+    </div>
+
+    <ul class="right">
+      <li><a href="#leadership">Leadership</li>
+      <li><a href="#services">Integrated services</li>
+      <li><a href="#">News</li>
+      <li><a href="#contact">Contact</li>
+    </ul>
+
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-linkedin"></i>
+
+
+
+  </footer>
+</div>
+
+</body>
+</html>

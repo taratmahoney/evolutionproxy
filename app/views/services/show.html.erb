@@ -1,0 +1,14 @@
+
+
+<div class="title-service">
+
+  <div class="picture-gradient"></div>
+
+  <h2> <%= @service.name %> </h2>
+</div>
+
+<div class="container-thin">
+  <div class="fr-view">
+    <%= raw sanitize(simple_format(@service.description), :tags => %w(br p) )  %>
+  </div>
+</div>  

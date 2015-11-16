@@ -1,0 +1,38 @@
+  <div class="form">
+
+    <%= form_for @service do |f| %>
+
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :image_url %>
+        <%= f.text_field :image_url %>
+      </div>
+
+      <div class="field">
+        <%= f.label :icon_name %>
+        <%= f.text_field :icon_name %>
+      </div>
+
+      <div class="editable-content">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+
+      <%= f.submit  %>
+
+    <% end %>
+
+    <script>
+     $(function() {
+          $('#edit').froalaEditor()
+      });
+      $(function() {
+        $('#service_description').froalaEditor({toolbarInline: false})
+      });
+    </script>
+</div>
