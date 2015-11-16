@@ -1,6 +1,6 @@
 
 
-<div class="title-service">
+<div class="title-service" style="background: url('<%= @service.image_url %>') no-repeat bottom center fixed;">
 
   <div class="picture-gradient"></div>
 
@@ -11,4 +11,6 @@
   <div class="fr-view">
     <%= raw sanitize(simple_format(@service.description), :tags => %w(br p) )  %>
   </div>
+
+  <%= link_to "Edit", edit_service_path %> | <%= link_to "x Delete", @service, method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
 </div>  

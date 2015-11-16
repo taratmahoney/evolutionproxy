@@ -41,13 +41,16 @@ class ServicesController < ApplicationController
   end
 
   def destroy
+    @service = Service.find(params[:id])
+    @service.destroy
+    redirect_to services_url, notice: "Your post was deleted"
   end
 
 
   private
 
   def service_params
-    params.require(:service).permit(:name, :description)
+    params.require(:service).permit(:name, :description, :image_url, :icon_name)
   end
 
 

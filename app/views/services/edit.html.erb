@@ -1,6 +1,8 @@
 <div class="container">
 
-  <h3> Edit <%= @service.name %> </h3>
+  <h3> Edit '<%= @service.name %>' </h3>
+  <%= link_to "x Delete", @service, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+  
 
   <%= render "form" %>
 

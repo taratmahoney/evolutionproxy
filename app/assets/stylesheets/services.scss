@@ -1,3 +1,10 @@
+.right{
+    float: right;
+  }
+
+.left{
+    float: left;
+  }
 
 .landing{
   background: url('Toronto.jpg') no-repeat center center fixed; 
@@ -18,16 +25,7 @@
   }
 }
 
-  .right{
-    float: right;
-  }
-
-  .left{
-    float: left;
-  }
-
 .what-we-do {
-
 
   .left{
     float: left;
@@ -79,21 +77,26 @@
     font-size: 2em;
     color: $light-green;
     padding: 2%;
+    text-decoration: underline;
   }
 
 
   .profile{
 
-    width: 40%;    
+    width: 45%;    
     text-align: center;
     padding: 2%;
 
-    h2{
+    h3{
       text-align: center;
       color: $blue;
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: bold;
       font-family: $heading-font-family;
+    }
+
+    p{
+      font-size: 1.2em;
     }
   }
 }
@@ -156,7 +159,7 @@
 .container-thin {
   width: 50%;
   margin:0 auto;
-  padding: 5% 0%;
+  padding: 3% 0%;
 }
 
 .contact {
