@@ -2,9 +2,7 @@
 
   <h1> News </h1>
 
-  <div class="toolbar">
-    <%= link_to "+ Add a new post", new_post_url %> | Click on any post to edit
-  </div>
+
   
   <% @post.each do |post| %>
     
@@ -30,5 +28,9 @@
 
 
   <% end %>
+
+  <div class="toolbar">
+    <%= link_to "+ Add a new post", new_post_url %> | Click on any post to edit
+  </div>
 
 </div>
