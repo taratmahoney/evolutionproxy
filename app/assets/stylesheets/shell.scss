@@ -11,7 +11,7 @@ nav {
   top: 0;
   z-index: 3;
   width: 100%;
-  border-bottom: 2px black;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.16);  
   height: 110px;
 
 
@@ -39,11 +39,26 @@ nav {
 .content{
   padding-top: 100px;
 }
+
+.toolbar{
+  background-color: $blue;
+  color: white;
+  padding: 2%;
+
+  .fa-pencil-square-o, .fa-trash-o{
+    color: white;
+
+       &:hover,
+      &:focus {
+        color: $light-green;
+      }
+  }
+}
 footer {
   background-color: white;
-  padding: 7% 7%;
-  padding-bottom: 7%;
-  border-top: 1px solid $medium-gray;
+  padding: 7% 10%;
+  margin-bottom: 7%;
+  border-top: 1px solid $green;
   width: 100%;
 
   img{

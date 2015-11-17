@@ -1,0 +1,38 @@
+  <div class="form">
+
+    <%= form_for @employee do |f| %>
+
+      <div class="field">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :title%>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="editable-content">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+
+      <%= f.submit  %>
+
+    <% end %>
+
+    <script>
+     $(function() {
+          $('#edit').froalaEditor()
+      });
+      $(function() {
+        $('#employee_description').froalaEditor({toolbarInline: false})
+      });
+    </script>
+</div>

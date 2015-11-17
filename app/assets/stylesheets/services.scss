@@ -108,6 +108,7 @@
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+  padding-bottom: 7%;
 
   h2{
     color: white;
@@ -128,7 +129,7 @@
 
       &:hover,
       &:focus {
-        color: darken(white, 15%);
+        color: $light-green;
       }
   }
 
@@ -141,6 +142,30 @@
   }
 
 }
+
+.service {
+  width: 49%;
+  display: inline-block;
+  padding: 5% 4%;
+  text-align: center;
+
+  .service-icon {
+    border: 2px white;
+    border-radius: 50%;
+    color: white;
+     z-index: 2;
+      position: relative;
+      padding-bottom: 2%;
+
+    .fa-users, .fa-compress, .fa-pencil-square-o, .fa-comments-o{
+      color: white;
+      font-size: 40px;
+
+
+    }
+  }
+}
+
 
 .field{
   width: 300px;
@@ -173,7 +198,6 @@
 }
 
 .title-service {
-  background: url('https://images.unsplash.com/photo-1430165558479-de3cf8cf1478?fit=crop&fm=jpg&h=725&ixjsv=2.0.0&ixlib=rb-0.3.5&q=80&w=1200') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -197,3 +221,5 @@
   z-index: 1;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.55) 0, rgba(2, 2, 2, 0.87) 100%);
 }
+
+

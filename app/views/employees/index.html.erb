@@ -1,0 +1,19 @@
+<div class="container">
+
+<h2> List of all Leadership Employees </h2>
+  <p> Click to edit </p>
+
+  <% @employee.each do |employee| %>
+    
+    <div class="employee">
+
+      <%= link_to "/employees/#{employee.id}" do %>
+
+        <%= employee.first_name %> <%= employee.last_name %>
+
+      <% end %>
+    </div>
+
+
+  <% end %>
+</div>

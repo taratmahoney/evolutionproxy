@@ -1,0 +1,55 @@
+  <div class="form">
+
+    <%= form_for @post do |f| %>
+
+     <div class="left">
+
+        <div class="field">
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
+
+        <div class="field">
+          <%= f.label :image %>
+          <%= f.text_field :image %>
+        </div>
+
+        <div class="field">
+          <%= f.label :author %>
+          <%= f.text_field :author %>
+        </div>
+
+         <div class="field">
+          <%= f.label :date %>
+          <%= f.date_field :date %>
+        </div>
+
+        <div class="field">
+        <%= f.label :preview %>
+        <%= f.text_area :preview %>
+      </div>
+
+    </div>
+
+    <div class="right">
+      <div class="editable-content">
+        <%= f.label :content %>
+        <%= f.text_area :content %>
+      </div>
+
+
+      <%= f.submit  %>
+    </div>
+
+    <% end %>
+
+    <script>
+     $(function() {
+          $('#edit').froalaEditor()
+      });
+      $(function() {
+        $('#post_content').froalaEditor({toolbarInline: false})
+      });
+   
+    </script>
+</div>
