@@ -2,9 +2,7 @@
 
     <%= form_for @post do |f| %>
 
-     <div class="left">
-
-        <div class="field">
+        <div class="field-long">
           <%= f.label :title %>
           <%= f.text_field :title %>
         </div>
@@ -24,14 +22,11 @@
           <%= f.date_field :date %>
         </div>
 
-        <div class="field">
+        <div class="field-long">
         <%= f.label :preview %>
         <%= f.text_area :preview %>
       </div>
 
-    </div>
-
-    <div class="right">
       <div class="editable-content">
         <%= f.label :content %>
         <%= f.text_area :content %>
@@ -39,7 +34,6 @@
 
 
       <%= f.submit  %>
-    </div>
 
     <% end %>
 

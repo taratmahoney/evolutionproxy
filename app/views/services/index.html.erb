@@ -1,11 +1,12 @@
 
 <div class="landing">
-  <h1> A new generation of stakeholder solicitation experts in Canada. </h1>
+<div class="picture-gradient light"></div>
+  <h1> A New Generation of Shareholder Solicitation Experts in Canada </h1>
 </div>
 
-<div class="what-we-do">
+<div class="two-pane-explainer">
 
-  <div class="left">
+  <div class="short">
 
     <div class="title">
       <hr/>
@@ -15,7 +16,7 @@
 
   </div>
 
-  <div class="right">
+  <div class="long">
 
     <p> 
     Evolution Proxy specializes in delivering victories to our clients through an integrated and highly calibrated approach. Evolution Proxy combines the very best in proxy solicitation expertise, powerful communications techniques, corporate governance advice and the strategic experience that comes with over 100 career engagements. 
@@ -24,57 +25,88 @@
   </div>
 </div>
 
+        
+
+
+
 <div class="leadership" id="leadership">
 
-  <h2>Leadership</h2>
+<div class="two-pane-explainer">
   
-  <div class="profile right">
-    <h3> <%= link_to 'Riyaz Lalani', '/employees/1' %></h3>
-    <h4>Chief Executive Officer</h4>
-    <p>Riyaz specializes in financial transactions, shareholder actions, crisis communications and media relations. Our clients benefit from his extensive experience working with public companies, boards of directors, shareholders and the media.</p>
+  <div class="short lead"><div class="title">
+    <hr/> 
+    <h2> Leadership </h2>
+    <hr/>
+  </div>
+</div>
 
+  <div class="long lead">
+    <p> Evolution Proxy’s new generation of shareholder solicitation experts will combine their experience on over 100 career engagements and market knowledge to develop an integrated, strategic approach to your unique situation. </p>
   </div>
 
-  <div class="profile left">
-    <h3><%= link_to 'Chang Park', '/employees/4' %></h3>
-    <h4>Chief Operating Officer</h4>
-    <p>Chang has extensive experience in managing solicitation campaigns related to proxy contests, annual and special meetings, and M&A transactions. He has been involved in over 50 proxy contests and dozens of M&A transactions, both in Canada and the United States.</p>
-  </div>
+</div>
 
+  <div class="container">
+
+      <h2> Evolution Proxy’s Leadership Team: </h2>
+
+      <%= link_to'/employees/1' do %>
+          <div class="profile left">
+            <h3> Riyaz Lalani</h3>
+            <h4>President</h4>
+            <h4>rlalani@evolutionproxy.com</h4>
+            <p>Riyaz specializes in financial transactions, shareholder actions, crisis communications and media relations. Our clients benefit from his extensive experience working on over 85 engagements in Canada, the United States, the UK and Europe, with public companies, boards of directors, shareholders and the media.</p>
+          </div>
+      <% end %>
+
+      <%= link_to'/employees/4' do %>
+      <div class="profile right">
+        <h3>Chang Park </h3>
+        <h4>Chief Operating Officer</h4>
+        <h4>cpark@evolutionproxy.com</h4>
+        <p>Chang has extensive experience in managing solicitation campaigns related to proxy contests, annual and special meetings, and M&A transactions. He has been involved in over 50 proxy contests and dozens of M&A transactions, both in Canada and the United States.</p>
+      </div>
+      <% end %>
+  </div>
 </div>
 
 <div class="services" id="services">
  <div class="picture-gradient"></div>
   <div class="container-thin">
 
-    <h2>Integrated services</h2>
+    <h2>Integrated Services</h2>
 
     <p> No matter what side of the campaign we are on, Evolution Proxy combines the very best in proxy solicitation knowledge, powerful communications techniques, corporate governance advice and the strategic experience that comes with over 100 career engagements to deliver a winning strategy. </p>
 
     <% @service.each do |service| %>
-
-      <div class="service">
-        <div class="service-icon"> <i class="<%= service.icon_name %>"></i> </div>
-        <h3> <%= link_to service.name, "/services/#{service.id}" %> </h3>
-      </div>
-      
+      <%= link_to "/services/#{service.id}" do%>
+        <div class="service">
+          <div class="service-icon"> <i class="<%= service.icon_name %>"></i> </div>
+          <h3>  <%= service.name %>  </h3>
+        </div>
+      <% end %>
     <% end %>
 
   </div>
 </div>
 
-<div class="contact" id="contact">
-  <h2> Get in touch </h2>
 
-  <p class="left">
-    <a href="mailto:rlalani@evolutionproxy.com">Send us an email</a> <br/>
+<div class="two-pane-explainer" id="contact">
+
+      <div class="short">
+        <div class="title">
+          <h2>Get in touch</h2>
+        </div>
+      </div>
+
+  <div class="long">
+    <p class="right"><a href="mailto:info@evolutionproxy.com">Send us an email</a> <br/>
     Phone: 416-907-9365 <br/>
   </p>
 
-  <p class="right"> 
+  <p class="left"> 
     357 Bay Street, Suite 502<br/>
     Toronto, ON<br/>
     M5H 2T7 <br/>
   </p>
-
 </div>
