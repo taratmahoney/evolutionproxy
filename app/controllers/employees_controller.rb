@@ -30,7 +30,7 @@ class EmployeesController < ApplicationController
   def update
     @employee = Employee.find(params[:id])
 
-    if @employee.save
+    if @employee.update(employee_params)
       redirect_to employees_url
     else
       render 'new'

@@ -32,7 +32,7 @@ class ServicesController < ApplicationController
   def update
     @service = Service.find(params[:id])
 
-    if @service.save
+    if @service.update(service_params)
       redirect_to services_url
     else
       render 'new'
